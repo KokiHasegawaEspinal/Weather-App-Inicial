@@ -1,0 +1,93 @@
+* {
+    margin: 0;              /* Quita márgenes por defecto de todos los elementos */
+    padding: 0;             /* Quita relleno por defecto */
+    box-sizing: border-box; /* Hace que ancho/alto incluyan padding y borde */
+    font-family: sans-serif;/* Fuente genérica sans-serif */
+}
+body{
+    background-color: #222; /* Fondo oscuro de la página */
+}
+.card{
+    width: 90%;             /* Ocupa 90% del ancho en móviles */
+    max-width: 470px;       /* No crece más de 470px en pantallas grandes */
+    background-color: #37007a; /* Fondo púrpura */
+    color: #fff;            /* Texto blanco */
+    margin: 50px auto 0;    /* Centrado horizontal con margen superior */
+    border: 2px solid #fff; /* Borde blanco */
+    padding: 40px 35px;     /* Espaciado interno */
+    text-align: center;     /* Centrar texto */
+}
+.search-bar{
+    width: 100%;            
+    display: flex;          /* Barra de búsqueda flexible */
+    align-items: center;
+    justify-content: center;
+}
+.search-bar input{
+    border: 0;              /* Sin borde */
+    outline: 0;             /* Sin contorno al hacer click */
+    background-color: #ebfffc; /* Fondo claro */
+    color: #555;            /* Texto gris */
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;    /* Bordes redondeados */
+    flex: 1;                /* Ocupar todo el espacio disponible */
+    margin-right: 16px;
+    font-size: 18px;
+}
+.search-bar button{
+    border: 0;
+    outline: 0;
+    background-color: #ebfffc;
+    border-radius: 50%;     /* Botón circular */
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+.search-bar button img {
+    width: 16px;            /* Icono pequeño */
+}
+.weather-icon {
+    width: 170px;           /* Icono principal del clima */
+    margin-top: 30px;
+}
+.weather h1 {
+    font-size: 80px;        /* Temperatura grande */
+    font-weight: 500;
+}
+.weather h2 {
+    font-size: 45px;        /* Ciudad */
+    font-weight: 500;
+    margin-top: -10px;
+}
+.details {
+    display: flex;          /* Columna humedad y viento en fila */
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.col img {
+    width: 40px;
+    margin-right: 10px;
+}
+.humidity,
+.wind {
+    font-size: 28px;
+    margin-top: -6px;
+}
+.weather {
+    display: none;          /* Oculto por defecto hasta que se busque */
+}
+.error {
+    text-align: left;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;          /* Oculto hasta que haya error */
+}
