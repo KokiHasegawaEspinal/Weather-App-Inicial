@@ -7,6 +7,7 @@
 body{
     background-color: #222; /* Fondo oscuro de la página */
 }
+/* Tarjeta principal */
 .card{
     width: 90%;             /* Ocupa 90% del ancho en móviles */
     max-width: 470px;       /* No crece más de 470px en pantallas grandes */
@@ -14,9 +15,14 @@ body{
     color: #fff;            /* Texto blanco */
     margin: 50px auto 0;    /* Centrado horizontal con margen superior */
     border: 2px solid #fff; /* Borde blanco */
+    border-radius: 12px;
     padding: 40px 35px;     /* Espaciado interno */
     text-align: center;     /* Centrar texto */
 }
+
+/* =====================
+   BARRA DE BÚSQUEDA
+===================== */
 .search-bar{
     width: 100%;            
     display: flex;          /* Barra de búsqueda flexible */
@@ -47,19 +53,29 @@ body{
 .search-bar button img {
     width: 16px;            /* Icono pequeño */
 }
+
+/* =====================
+   CLIMA
+===================== */
 .weather-icon {
     width: 170px;           /* Icono principal del clima */
     margin-top: 30px;
 }
+/* Estilo general (pantallas grandes o medianas) */
 .weather h1 {
     font-size: 80px;        /* Temperatura grande */
     font-weight: 500;
 }
+/* Estilo general (pantallas grandes o medianas) */
 .weather h2 {
     font-size: 45px;        /* Ciudad */
     font-weight: 500;
     margin-top: -10px;
 }
+
+/* =====================
+   DETALLES
+===================== */
 .details {
     display: flex;          /* Columna humedad y viento en fila */
     align-items: center;
@@ -90,4 +106,42 @@ body{
     font-size: 14px;
     margin-top: 10px;
     display: none;          /* Oculto hasta que haya error */
+}
+
+/* =====================
+   📱 ESTILOS RESPONSIVOS
+===================== */
+@media (max-width: 600px) {
+    .card {
+        padding: 20px; /* Menos espacio en móviles */
+    }
+
+    .weather h1 {
+        font-size: 50px; /* Reducir tamaño de temperatura */
+    }
+
+    .weather h2 {
+        font-size: 28px; /* Reducir tamaño de ciudad */
+    }
+
+    .details {
+        flex-direction: column; /* Apila humedad y viento */
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .search-bar input {
+        font-size: 16px;  
+        height: 50px;
+        padding: 8px 20px;
+    }
+
+    .search-bar button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .weather-icon {
+        width: 120px; /* Ícono más pequeño */
+    }
 }
